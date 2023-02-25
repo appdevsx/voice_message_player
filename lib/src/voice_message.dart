@@ -25,6 +25,7 @@ class VoiceMessage extends StatefulWidget {
     this.mePlayIconColor = Colors.black,
     this.contactPlayIconColor = Colors.black26,
     this.meFgColor = const Color(0xffffffff),
+    this.noiseColor = const Color(0xffffffff),
     this.played = false,
     this.onPlay,
   }) : super(key: key);
@@ -36,6 +37,7 @@ class VoiceMessage extends StatefulWidget {
       contactBgColor,
       contactFgColor,
       mePlayIconColor,
+      noiseColor,
       contactPlayIconColor;
   final bool played, me;
   Function()? onPlay;
@@ -184,9 +186,7 @@ class _VoiceMessageState extends State<VoiceMessage>
                     child: Container(
                       width: noiseWidth,
                       height: 6.w(),
-                      color: widget.me
-                          ? widget.meBgColor.withOpacity(.4)
-                          : widget.contactBgColor.withOpacity(.35),
+                      color: widget.noiseColor,
                     ),
                   );
                 },
@@ -230,13 +230,13 @@ class _VoiceMessageState extends State<VoiceMessage>
 
   _setPlayingStatus() => _isPlaying = _playingStatus == 1;
 
- void  _startPlaying() async {
+  void _startPlaying() async {
     _playingStatus = _player.play(UrlSource(widget.audioSrc)) as int;
     _setPlayingStatus();
     _controller!.forward();
   }
 
- void _stopPlaying() async {
+  void _stopPlaying() async {
     _playingStatus = _player.pause() as int;
     _controller!.stop();
   }
@@ -294,6 +294,7 @@ class _VoiceMessageState extends State<VoiceMessage>
     _player.dispose();
     super.dispose();
   }
+
   void _listenToRemaningTime() {
     _player.onDurationChanged.listen((Duration p) {
       final _newRemaingTime1 = p.toString().split('.')[0];
