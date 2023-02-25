@@ -28,6 +28,7 @@ class VoiceMessage extends StatefulWidget {
     this.noiseColor = const Color(0xffffffff),
     this.noiseBgColor = const Color(0xffffffff),
     this.remaingTimeColor = const Color(0xffffffff),
+    this.contactNoiseColor = const Color(0xffffffff),
     this.played = false,
     this.onPlay,
   }) : super(key: key);
@@ -40,6 +41,7 @@ class VoiceMessage extends StatefulWidget {
       contactFgColor,
       mePlayIconColor,
       noiseColor,
+      contactNoiseColor,
       noiseBgColor,
       remaingTimeColor,
       contactPlayIconColor;
@@ -179,7 +181,13 @@ class _VoiceMessageState extends State<VoiceMessage>
         child: Stack(
           clipBehavior: Clip.hardEdge,
           children: [
-            widget.me ?  Noises(color: widget.noiseColor,) : const ContactNoise(),
+            widget.me
+                ? Noises(
+                    color: widget.noiseColor,
+                  )
+                : ContactNoise(
+                    color: widget.contactNoiseColor,
+                  ),
             if (_audioConfigurationDone)
               AnimatedBuilder(
                 animation:

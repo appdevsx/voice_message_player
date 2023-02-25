@@ -5,7 +5,8 @@ import 'package:voice_message_package/src/helpers/utils.dart';
 
 /// document will be added
 class ContactNoise extends StatelessWidget {
-  const ContactNoise({Key? key}) : super(key: key);
+   final Color color;
+  const ContactNoise({Key? key, required this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class ContactNoise extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(1000),
-        color: Colors.grey,
+        color: color,
       ),
     );
   }
