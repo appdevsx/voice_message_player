@@ -179,7 +179,7 @@ class _VoiceMessageState extends State<VoiceMessage>
         child: Stack(
           clipBehavior: Clip.hardEdge,
           children: [
-            widget.me ? const Noises() : const ContactNoise(),
+            widget.me ?  Noises(color: widget.noiseColor,) : const ContactNoise(),
             if (_audioConfigurationDone)
               AnimatedBuilder(
                 animation:
@@ -199,7 +199,7 @@ class _VoiceMessageState extends State<VoiceMessage>
               opacity: .0,
               child: Container(
                 width: noiseWidth,
-                color:widget.noiseColor,
+                color: Colors.amber.withOpacity(1),
                 child: Slider(
                   min: 0.0,
                   max: maxDurationForSlider,
