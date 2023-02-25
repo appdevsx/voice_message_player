@@ -26,6 +26,8 @@ class VoiceMessage extends StatefulWidget {
     this.contactPlayIconColor = Colors.black26,
     this.meFgColor = const Color(0xffffffff),
     this.noiseColor = const Color(0xffffffff),
+    this.noiseBgColor = const Color(0xffffffff),
+    this.remaingTimeColor = const Color(0xffffffff),
     this.played = false,
     this.onPlay,
   }) : super(key: key);
@@ -38,6 +40,8 @@ class VoiceMessage extends StatefulWidget {
       contactFgColor,
       mePlayIconColor,
       noiseColor,
+      noiseBgColor,
+      remaingTimeColor,
       contactPlayIconColor;
   final bool played, me;
   Function()? onPlay;
@@ -147,7 +151,7 @@ class _VoiceMessageState extends State<VoiceMessage>
                 _remaingTime,
                 style: TextStyle(
                   fontSize: 10,
-                  color: widget.me ? widget.meFgColor : widget.contactFgColor,
+                  color: widget.remaingTimeColor,
                 ),
               )
             ],
@@ -186,7 +190,7 @@ class _VoiceMessageState extends State<VoiceMessage>
                     child: Container(
                       width: noiseWidth,
                       height: 6.w(),
-                      color: widget.noiseColor,
+                      color: widget.noiseBgColor,
                     ),
                   );
                 },
@@ -195,7 +199,7 @@ class _VoiceMessageState extends State<VoiceMessage>
               opacity: .0,
               child: Container(
                 width: noiseWidth,
-                color: Colors.amber.withOpacity(1),
+                color:widget.noiseColor,
                 child: Slider(
                   min: 0.0,
                   max: maxDurationForSlider,
