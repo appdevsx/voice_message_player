@@ -13,18 +13,66 @@ packages:
     dependency: transitive
     description:
       name: audio_session
-      sha256: d8234185733d80133249143d67bdee29dcedc4588ce6ea232d88b083e79bfaf0
+      sha256: e4acc4e9eaa32436dfc5d7aed7f0a370f2d7bb27ee27de30d6c4f220c2a05c73
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.6+1"
+    version: "0.1.13"
   audioplayers:
     dependency: transitive
     description:
       name: audioplayers
-      sha256: a565e7e3e8a21a823b8cd7fed0bde1eb3796a96b373374be557adecfb511fa6b
+      sha256: fd7f690dff8eacaff4f2d0a5029538b50fac348a78969ede2c812fd66c2a3abe
       url: "https://pub.dev"
     source: hosted
-    version: "0.20.1"
+    version: "1.0.1"
+  audioplayers_android:
+    dependency: transitive
+    description:
+      name: audioplayers_android
+      sha256: cba55fe3f86ad04b3ae40490d316898faafa72ec9a9c08b5c107c878588d2993
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  audioplayers_darwin:
+    dependency: transitive
+    description:
+      name: audioplayers_darwin
+      sha256: f1628807d8c68820d112b1bd7b8b588dbf3faf3be29b151b16fdc66060250de6
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  audioplayers_linux:
+    dependency: transitive
+    description:
+      name: audioplayers_linux
+      sha256: "773c82a0a8ffed0a0a99cc67306cb290aad9f67185320ac4d85d6d9b5adeb69d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  audioplayers_platform_interface:
+    dependency: transitive
+    description:
+      name: audioplayers_platform_interface
+      sha256: "55f5053f0fc43e400f6880e0e9f3188b9312077236d8bfc3aaedd7422b28e9b4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  audioplayers_web:
+    dependency: transitive
+    description:
+      name: audioplayers_web
+      sha256: "58e2d2b4ac9d0110db2797b4d2dce79325b1560dd28b2fba7ae0d3daf255351c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  audioplayers_windows:
+    dependency: transitive
+    description:
+      name: audioplayers_windows
+      sha256: "52e03a36358474db886012cb7c5818fc6c183a3cb0b404da41c0bd2d35831273"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -164,26 +212,26 @@ packages:
     dependency: transitive
     description:
       name: just_audio
-      sha256: "31694689247a4d8a532e49227606a7a8bc54c3665c1211e91e236478fe45fdfb"
+      sha256: "7a5057a4d05c8f88ee968cec6fdfe1015577d5184e591d5ac15ab16d8f5ecb17"
       url: "https://pub.dev"
     source: hosted
-    version: "0.9.21"
+    version: "0.9.31"
   just_audio_platform_interface:
     dependency: transitive
     description:
       name: just_audio_platform_interface
-      sha256: fc3ca13776f5702e6ed9ec2e3795b4f1f6029c41baaa70d4741575d3c3fbf8ad
+      sha256: eff112d5138bea3ba544b6338b1e0537a32b5e1425e4d0dc38f732771cda7c84
       url: "https://pub.dev"
     source: hosted
-    version: "4.1.0"
+    version: "4.2.0"
   just_audio_web:
     dependency: transitive
     description:
       name: just_audio_web
-      sha256: f48910455278f0a133fdfb91e12cebca4a49e38941350d31e55fde845a0277c0
+      sha256: "89d8db6f19f3821bb6bf908c4bfb846079afb2ab575b783d781a6bf119e3abaf"
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.4"
+    version: "0.4.7"
   lints:
     dependency: transitive
     description:
