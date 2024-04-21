@@ -41,7 +41,6 @@ class _ChatPageState extends State<ChatPage> {
               child: Icon(Icons.arrow_back_ios_outlined, size: 3.7.w),
             ),
             SizedBox(width: 5.5.w),
-            //* avatar.
             ClipRRect(
               borderRadius: BorderRadius.circular(100),
               child: CircleAvatar(
@@ -52,7 +51,6 @@ class _ChatPageState extends State<ChatPage> {
               ),
             ),
             SizedBox(width: 3.7.w),
-            //* name & activity.
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -66,7 +64,7 @@ class _ChatPageState extends State<ChatPage> {
                     Text(
                       'Active Now',
                       style: TextStyle(
-                          fontSize: 12.2, color: Colors.grey.shade600),
+                          fontSize: 12.2, color: Colors.grey.shade600,),
                     ),
                   ],
                 )
