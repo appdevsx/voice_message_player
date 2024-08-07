@@ -4,7 +4,7 @@ version: 0.0.74
 homepage: https://github.com/mehranshoqi/voice_message_player
 
 environment:
-  sdk: ">=3.1.0 <4.0.0"
+  sdk: ">=3.4.3 <4.0.0"
 
 
 dependencies:
