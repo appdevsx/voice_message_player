@@ -9,9 +9,9 @@ import 'package:voice_message_package/src/helpers/utils.dart';
 class Noises extends StatelessWidget {
   final Color color;
   const Noises({
-    Key? key,
+    super.key,
     required this.color,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

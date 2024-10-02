@@ -7,9 +7,9 @@ import '../widgets/bubble.dart';
 
 // ignore: must_be_immutable
 class ChatPage extends StatefulWidget {
-  const ChatPage({Key? key}) : super(key: key);
+  const ChatPage({super.key});
   @override
-  _ChatPageState createState() => _ChatPageState();
+  State<StatefulWidget> createState() => _ChatPageState();
 }
 
 class _ChatPageState extends State<ChatPage> {

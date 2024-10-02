@@ -10,7 +10,7 @@ import '../helpers/style.dart';
 /// document will be added
 // ignore: must_be_immutable
 class Bubble extends StatelessWidget {
-  Bubble(this.me, this.index, {Key? key, this.voice = false}) : super(key: key);
+  Bubble(this.me, this.index, {super.key, this.voice = false});
   bool me, voice;
   int index;
 

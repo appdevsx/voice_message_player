@@ -15,7 +15,7 @@ import 'helpers/colors.dart';
 // ignore: must_be_immutable
 class VoiceMessage extends StatefulWidget {
   VoiceMessage({
-    Key? key,
+    super.key,
     required this.audioSrc,
     required this.me,
     this.noiseCount = 27,
@@ -31,9 +31,9 @@ class VoiceMessage extends StatefulWidget {
     this.contactNoiseColor = const Color(0xffffffff),
     this.played = false,
     this.onPlay,
-  }) : super(key: key);
+  });
 
-  final audioSrc;
+  final dynamic audioSrc;
   final int noiseCount;
   final Color meBgColor,
       meFgColor,
@@ -49,7 +49,7 @@ class VoiceMessage extends StatefulWidget {
   Function()? onPlay;
 
   @override
-  _VoiceMessageState createState() => _VoiceMessageState();
+  State<StatefulWidget> createState() => _VoiceMessageState();
 }
 
 class _VoiceMessageState extends State<VoiceMessage>
@@ -212,7 +212,7 @@ class _VoiceMessageState extends State<VoiceMessage>
                   min: 0.0,
                   max: maxDurationForSlider,
                   onChangeStart: (__) => _stopPlaying(),
-                  onChanged: (_) => _onChangeSlider(_),
+                  onChanged: (d) => _onChangeSlider(d),
                   value: duration + .0,
                 ),
               ),
@@ -309,11 +309,11 @@ class _VoiceMessageState extends State<VoiceMessage>
 
   void _listenToRemaningTime() {
     _player.onDurationChanged.listen((Duration p) {
-      final _newRemaingTime1 = p.toString().split('.')[0];
-      final _newRemaingTime2 =
-          _newRemaingTime1.substring(_newRemaingTime1.length - 5);
-      if (_newRemaingTime2 != _remaingTime) {
-        setState(() => _remaingTime = _newRemaingTime2);
+      final newRemaingTime1 = p.toString().split('.')[0];
+      final newRemaingTime2 =
+          newRemaingTime1.substring(newRemaingTime1.length - 5);
+      if (newRemaingTime2 != _remaingTime) {
+        setState(() => _remaingTime = newRemaingTime2);
       }
     });
   }

@@ -12,8 +12,8 @@ class Widgets {
       Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(shape: BoxShape.circle, color: color),
-        child: child,
         width: width,
         height: width,
+        child: child,
       );
 }
